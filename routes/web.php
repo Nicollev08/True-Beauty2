@@ -39,3 +39,5 @@ Route::get('/contra', [LoginController::class, 'contra']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
 
+Route::get('/productos', [HomeController::class, 'viewproductos']);
+

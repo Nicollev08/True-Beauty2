@@ -11,7 +11,9 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+
     <link rel="stylesheet" href="{{ url('assets/css/index.css') }}">
+    
     
 </head>
 <body>
@@ -175,7 +177,7 @@
         </section>
 
         <!-- SERVICES SECTION -->
-        <section class="services section" id="services">
+        <section class="services section" id="servicios">
             <div class="services__content">
                 <div class="row">
                     <div class="section__title2">
@@ -237,181 +239,7 @@
         </section>
 
         <!-- PRODUCTS SECTION -->
-        <section class="package section" id="productos">
-            <div class="package_-content">
-                <div class="row">
-                    <div class="section__title2">
-                        <h1>PRODUCTOS</h1>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="package__cards row container">
-                    <div class="product">
-                        <div class="product__title">
-                            <h1>Bronze</h1>
-                        </div>
-                        <div class="product__items">
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Penteado</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Maquiagem</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Unhas<span>(tradicional francesa)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Depilação<span>(1 area)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Design de sobrancelha</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Limpeza de pele</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Sala de noiva reservada</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Mesa de frutas</p>
-                            </div>
-                            <button class="btn">quero esse</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <div class="product__title">
-                            <h1>Prata</h1>
-                        </div>
-                        <div class="product__items">
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Penteado</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Maquiagem</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Unhas<span>(tradicional francesa)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Depilação<span>(1 area)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Design de sobrancelha</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Limpeza de pele</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Sala de noiva reservada</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Mesa de frutas</p>
-                            </div>
-                            <button class="btn">quero esse</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <div class="product__title">
-                            <h1>Ouro</h1>
-                        </div>
-                        <div class="product__items">
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Penteado</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Maquiagem</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Unhas<span>(tradicional francesa)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Depilação<span>(1 area)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Design de sobrancelha</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Limpeza de pele</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Sala de noiva reservada</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-x x__icon' ></i>
-                                <p class="not">Mesa de frutas</p>
-                            </div>
-                            <button class="btn">quero esse</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <div class="product__title">
-                            <h1>Diamante</h1>
-                        </div>
-                        <div class="product__items">
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Penteado</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Maquiagem</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Unhas<span>(tradicional francesa)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Depilação<span>(1 area)</span></p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Design de sobrancelha</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Limpeza de pele</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Sala de noiva reservada</p>
-                            </div>
-                            <div class="item">
-                                <i class='bx bx-message-square-check check__icon' ></i>
-                                <p>Mesa de frutas</p>
-                            </div>
-                            <button class="btn">quero esse</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <x-productos />
 
         <!-- TESTIMONIALS SECTION -->
         <section class="testimonials section" id="testimonios">

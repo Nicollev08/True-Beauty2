@@ -23,8 +23,8 @@
             <a style="text-decoration:none" href="#about">¿Quiénes somos?</a>
             <a style="text-decoration:none" href="#servicios">Servicios</a>
             <a style="text-decoration:none" href="#catalogo">Agendar cita</a>
-            <a style="text-decoration:none" href="#participar">Productos</a>
-            <a style="text-decoration:none" href="home">Redes</a>
+            <a style="text-decoration:none" href="#productos">Productos</a>
+            <a style="text-decoration:none" href="redes">Redes</a>
         </nav>
     </header>
     <script src="JS/index.js"></script>
