@@ -344,9 +344,9 @@
             <div class="footer__data">
                 <h1>TRUE BEAUTY</h1>
                 <div class="footer__data-social">
-                    <a href=""><i class='bx bxl-facebook social__icon'></i></a>
-                    <a href=""><i class='bx bxl-instagram social__icon' ></i></a>
-                    <a href=""><i class='bx bxl-whatsapp social__icon' ></i></a>
+                    <a href="https://web.facebook.com/"><i class='bx bxl-facebook social__icon'></i></a>
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram social__icon' ></i></a>
+                    <a href="https://web.whatsapp.com/"><i class='bx bxl-whatsapp social__icon' ></i></a>
                 </div>
             </div>
             <div class="footer__data">
