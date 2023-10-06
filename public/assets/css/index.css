@@ -1,6 +1,5 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap&family=Montserrat:wght@300;400;700;800&display=swap');
 
 
 /*---------------VARIABLES CSS-------------------*/
@@ -16,7 +15,7 @@
     --fuccia-color: rgb(219, 103, 149);
 
     /*---------------FONT  AND TYPOGRAPHY-------------------*/
-    --font-cursive: 'Great Vibes', cursive;
+    --font-cursive: 'Gelasio', cursive;
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
@@ -341,8 +340,142 @@ a{
 
 
 
+/* services */
+
+.services {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 250px 400px);
+    gap: 30px;
+}
+
+
+.services__image {
+    background-size: cover;
+    background-position: center;
+}
+
+.services__texts {
+    padding: 1rem 1.5rem;
+    place-self: center;
+    text-align: center;
+    --color: hsla(51, 100%, 49%, 0.263);
+}
+
+.services__texts--2 {
+    --color: hsla(7, 99%, 70%, 0.267);
+}
+
+.services__image--3 {
+    background-size: cover;
+    background-position: center;
+    /* Agrega estilos específicos para la tercera imagen si es necesario */
+}
+
+.services__texts--3 {
+    /* Agrega estilos específicos para el tercer conjunto de textos si es necesario */
+}
+
+.services__image--4 {
+    background-size: cover;
+    background-position: center;
+    /* Agrega estilos específicos para la cuarta imagen si es necesario */
+}
+
+.services__texts--4 {
+    /* Agrega estilos específicos para el cuarto conjunto de textos si es necesario */
+}
+
+.services__title {
+    font-size: 2rem;
+    font-family: var(--font-cursive);
+    color: var(--black-color);
+}
+
+.services__paragraph {
+    line-height: 1.5;
+    color: var(--cafe-color);
+    margin: 1.5rem 0;
+}
+
+.services__cta {
+    color: var(--black-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var();
+
+    position: relative;
+}
+
+.services__cta::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    border-radius: 2em;
+    z-index: -1;
+    background-color: var(--color);
+}
+
+
+@media (min-width:768px) {
+
+    .services {
+        grid-template-rows: repeat(4, 500px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "text1 img1"
+            "img2 text2"
+            "text3 img3" /* Agregado para el tercer conjunto de contenido */
+            "img4 text4";
+    }
+
+
+    .services__image {
+        background-image: url('/IMG/uñas.jpg');
+        grid-area: img1;
+    }
+
+    .services__texts {
+
+        text-align: start;
+        grid-area: text1;
+        padding: 2rem 3rem;
+    }
+
+    .services__texts--2 {
+        grid-area: text2;
+    }
+
+
+    .service__image--2 {
+        background-image: url('/IMG/pestañas.jpg');
+        grid-area: img2;
+    }
+
+    .service__image--3 {
+        background-image: url('/IMG/facial.jpg'); 
+        grid-area: img3;
+    }
+
+    .services__texts--3 {
+        grid-area: text3;
+        
+    }
+
+    .service__image--4 {
+        background-image: url('/IMG/maquillaje.jpg'); 
+        grid-area: img4;
+    }
+
+    .services__texts--4 {
+        grid-area: text4;
+    }
+
+}
 /* SERVICES */
-.services{
+/* .services{
     width: 100%;
     background-image: url(/IMG/arabesco-left-bottom.svg);
     background-size:contain;
@@ -397,7 +530,7 @@ a{
     border-color: var(--cafe-color);
     width: 100%;
     height: 100%;
-}
+} */
 /*PACKAGE */
 .package{
     width: 100%;
