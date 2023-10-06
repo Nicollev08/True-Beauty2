@@ -1,34 +1,48 @@
-(function () {
-    const sliders = [...document.querySelectorAll('.about__body')];
-    const buttonNext = document.querySelector('#next');
-    const buttonBefore = document.querySelector('#before');
-    let value;
+$(document).ready(function () {
+  const sliders = $('.about__body');
+  const buttonNext = $('#next');
+  const buttonBefore = $('#before');
+  let currentIndex = 0;
 
-    buttonNext.addEventListener('click', () => {
-        changePosition(1);
-    });
+  buttonNext.on('click', () => {
+      changePosition(1);
+  });
 
-    buttonBefore.addEventListener('click', () => {
-        changePosition(-1);
-    });
+  buttonBefore.on('click', () => {
+      changePosition(-1);
+  });
 
-    const changePosition = (add) => {
-        const currentTestimony = document.querySelector('.about__body--show').dataset.id;
-        value = Number(currentTestimony);
-        value += add;
+  const changePosition = (offset) => {
+      sliders.eq(currentIndex).removeClass('about__body--show');
 
-        sliders[Number(currentTestimony) - 1].classList.remove('about__body--show');
-        if (value === sliders.length + 1 || value === 0) {
-            value = value === 0 ? sliders.length : 1;
+      currentIndex = (currentIndex + offset + sliders.length) % sliders.length;
+
+      sliders.eq(currentIndex).addClass('about__body--show');
+  }
+});
+
+$(document).ready(function(){
+    $('.all-products').slick({
+      infinite: true,
+      slidesToShow: 5, 
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000, 
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
         }
-
-        sliders[value - 1].classList.add('about__body--show');
-    }
-})();
-
-
-  
-  
-  
+      ]
+    });
+  });
   
   

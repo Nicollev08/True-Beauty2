@@ -1,6 +1,5 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap&family=Montserrat:wght@300;400;700;800&display=swap');
 
 
 /*---------------VARIABLES CSS-------------------*/
@@ -16,7 +15,7 @@
     --fuccia-color: rgb(219, 103, 149);
 
     /*---------------FONT  AND TYPOGRAPHY-------------------*/
-    --font-cursive: 'Great Vibes', cursive;
+    --font-cursive: 'Gelasio', cursive;
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
@@ -221,7 +220,11 @@ a{
     justify-content: center;
     align-items: center;
     background: white;
-    height: 90vh;
+    padding: 1rem;
+    
+}
+.contip{
+    
 }
 .tipcontainer{
     display: flex;
@@ -229,15 +232,15 @@ a{
     width: 100%px;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 3rem;
 }
 .tipcontainer .tip{
-    flex: 0 0 calc(33.33% - 20px); /* Esto distribuirá las tarjetas en filas de tres */
+    flex: 0 0 calc(33.33% - 20px); 
     margin: 30px;
     max-width: 500px;
     height: 300px;
     background: white;
-    padding: 20px 15px;
+    padding: 5px 15px;
     box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 }
@@ -255,13 +258,15 @@ a{
 
 }
 .tipcontainer .tip .imgBx img{
-    max-width: 100%;
+    width: 100%; 
+    height: 180%; 
+    object-fit: cover; 
     border-radius: 4px;
 }
 .tipcontainer .tip .content{
     position: relative;
     margin-top: -140px;
-    padding: 10px 15px;
+    padding: 0px 15px;
     text-align: center;
     color: #111;
     visibility: hidden;
@@ -341,8 +346,143 @@ a{
 
 
 
+/* services */
+.servicios{
+    padding: 2rem;
+}
+.services {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 250px 400px);
+    gap: 30px;
+    padding: 2rem;
+}
+
+
+.services__image {
+    background-size: cover;
+    background-position: center;
+}
+
+.services__texts {
+    padding: 1rem 1.5rem;
+    place-self: center;
+    text-align: center;
+    --color: hsla(51, 100%, 49%, 0.263);
+}
+
+.services__texts--2 {
+    --color: hsla(7, 99%, 70%, 0.267);
+}
+
+.services__image--3 {
+    background-size: cover;
+    background-position: center;
+}
+
+.services__texts--3 {
+
+}
+
+.services__image--4 {
+    background-size: cover;
+    background-position: center;
+}
+
+.services__texts--4 {
+    --color: hsla(7, 99%, 70%, 0.267);
+}
+
+.services__title {
+    font-size: 2rem;
+    font-family: var(--font-cursive);
+    color: var(--black-color);
+}
+
+.services__paragraph {
+    line-height: 1.5;
+    color: var(--cafe-color);
+    margin: 1.5rem 0;
+}
+
+.services__cta {
+    color: var(--black-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var();
+
+    position: relative;
+}
+
+.services__cta::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    border-radius: 2em;
+    z-index: -1;
+    background-color: var(--color);
+}
+
+
+@media (min-width:768px) {
+
+    .services {
+        grid-template-rows: repeat(4, 500px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "text1 img1"
+            "img2 text2"
+            "text3 img3" /* Agregado para el tercer conjunto de contenido */
+            "img4 text4";
+    }
+
+
+    .services__image {
+        background-image: url('/IMG/uñas.jpg');
+        grid-area: img1;
+    }
+
+    .services__texts {
+
+        text-align: start;
+        grid-area: text1;
+        padding: 2rem 3rem;
+    }
+
+    .services__texts--2 {
+        grid-area: text2;
+    }
+
+
+    .service__image--2 {
+        background-image: url('/IMG/pestañas.jpg');
+        grid-area: img2;
+    }
+
+    .service__image--3 {
+        background-image: url('/IMG/facial.jpg'); 
+        grid-area: img3;
+    }
+
+    .services__texts--3 {
+        grid-area: text3;
+        
+    }
+
+    .service__image--4 {
+        background-image: url('/IMG/maquillaje.jpg'); 
+        grid-area: img4;
+    }
+
+    .services__texts--4 {
+        grid-area: text4;
+    }
+
+}
 /* SERVICES */
-.services{
+/* .services{
     width: 100%;
     background-image: url(/IMG/arabesco-left-bottom.svg);
     background-size:contain;
@@ -397,76 +537,20 @@ a{
     border-color: var(--cafe-color);
     width: 100%;
     height: 100%;
-}
-/*PACKAGE */
-.package{
-    width: 100%;
-    background-color: var(--rosa-color);
-    border-radius: 0 300px;
-}
-.package__cards{
-    margin-top: var(--mb-2-5);
-}
-.product{
-    height: 360px;
-    background-color: var(--white-color);
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.25);
-    border-radius: 30px;
-    padding: 1.5rem;
-    margin: 10px auto;
-    transition: all 400ms ease-in-out;
-}
-.product:hover{
-    transform: scale(1.1);
-}
-.product__title{
-    text-align: center;
-    margin-bottom: var(--mb-1-5);
-}
-.product__title h1{
-    font-weight: var(--font-bold);
-    font-size: var(--h1-font-size);
-    line-height: var(--h1-font-size);
-    color: var(--black-color);
-}
-.product__items{
-    margin-bottom: var(--mb-1);
-}
-.item{
-    display: flex;
-    align-items: center;
-}
-.item p{
-    font-weight: var(--font-bold);
-    line-height: calc(var(--normal-font-size) + 10px);
-    color: var(--cafe-color);
-    margin-left: var(--mb-05);
-}
-.item p span{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-light);
-}
-.item .x__icon, .item .check__icon{
-    font-size: var(--h3-font-size);
-}
-.item .x__icon, .item .not{
-    color: var(--second-color);
-}
-.item .check__icon{
-    color: var(--cafe-color);
-}
-.product__items button{
-    margin: 0 auto;
-    margin-top: var(--mb-1);
-}
+} */
+
+
+
 
 /* TESTIMONIALS */
 .testimonials{
     background-color: var(--white-color);
     border-radius: 300px 0;
+    padding: 0;
 }
+
 .testimonials__content{
-    padding: 2rem;
+    padding: 3rem;
     
 }
 .testimonials__card{

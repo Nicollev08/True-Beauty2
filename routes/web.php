@@ -43,7 +43,7 @@ Route::get('/logout', [LogoutController::class, 'logout']);
 
 Route::get('/productos', [HomeController::class, 'viewproductos']);
 
-Route::resource('/productoss', ProductController::class )->names('productos');
+Route::resource('/productos', ProductController::class);
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
 

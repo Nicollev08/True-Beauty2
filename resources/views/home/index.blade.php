@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 
     <link rel="stylesheet" href="{{ url('assets/css/index.css') }}">
     
@@ -37,68 +36,71 @@
         </section>
        <!--TIPS-->
        <section class="tips">
-        <div class="row">
-            <div class="section__title2">
-                <h1>TIPS DE BELLEZA</h1>
-                <span></span>
-            </div>
-        </div>
-        <div class="tipcontainer">
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h2>CARD UNO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
+        <div class="contip">
+            <div class="row">
+                <div class="section__title2">
+                    <h1>TIPS DE BELLEZA</h1>
+                    <span></span>
                 </div>
             </div>
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
+            <div class="tipcontainer">
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Hidrata tu rostro antes del maquillaje</h2>
+                        <p>Si quieres un maquillaje perfecto, pasa un hielo de zumo de pepino con sábila por el rostro y el cuello. 
+                            Esto dejará la piel tersa para poder poner cualquier producto de belleza.</p>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2>CARD DOS</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Cepilla tu cabello con cerdas naturales</h2>
+                        <p>Usa cepillos con cerdas naturales. Son muy comunes las cerdas de jabalí, pues el cabello no produce el frizz que producen las cerdas plásticas. Además, la grasa natural del cabello se distribuye de manera uniforme por toda la cabellera.</p>
+                    </div>
                 </div>
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Agua fría para el cabello</h2>
+                        <p>Si quieres evitar la caída de tu cabello y prevenir la resequedad, además de utilizar tratamientos anticaída, también debes enjuaga tu pelo después del lavado con agua fría, sobre todo si tu pelo es fino. El agua fría promueve más el brillo una vez secado.</p>
+                    </div>
+                </div>
+                
             </div>
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
+            <div class="tipcontainer">
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Desinflama tus párpados</h2>
+                        <p>Necesitas lucir perfecta después de una noche de fiesta o simplemente después de dormir un largo tiempo. Envuelve un trozo de hielo con una toalla y ponlo sobre el área inflamada de los ojos. En unos minutos comenzará a reducirse el tamaño.</p>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2>CARD TRES</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Talco para el exceso de grasa en el cabello</h2>
+                        <p>Para mejorar un cabello visiblemente graso, usa talco. Muchas veces alguna urgencia impide lavar el cabello con tiempo. Si es tu caso, aplica un poco de talco a las cerdas de tu cepillo y péinalo hasta quitar el exceso.</p>
+                    </div>
                 </div>
-            </div>
-            
-        </div>
-        <div class="tipcontainer">
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h2>CARD CUATRO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
-                </div>
-            </div>
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h2>CARD CINCO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
-                </div>
-            </div>
-            <div class="tip">
-                <div class="imgBx">
-                    <img src="/IMG/arroz.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h2>CARD SEIS</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione quaerat totam optio quidem, porro voluptatum libero animi? Maiores ad amet quia quasi placeat! Facere earum hic maiores quia sapiente?</p>
+                <div class="tip">
+                    <div class="imgBx">
+                        <img src="/IMG/tip6.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Uñas siempre fuertes y limpias</h2>
+                        <p>Las uñas son la carta de presentación de las manos. Por eso deben lucir limpias y sanas. Aplica limón antes de dormir, tus uñas estarán siempre limpias y fuertes para los días en que prefieras lucirlas al natural.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,7 +179,64 @@
         </section>
 
         <!-- SERVICES SECTION -->
-        <section class="services section" id="servicios">
+        <section class="servicios">
+            <div class="row">
+                <div class="section__title2">
+                    <h1>SERVICIOS</h1>
+                    <span></span>
+                </div>
+            </div>
+           <div class="services">
+            
+            <div class="services__image service__image--1"></div>
+      
+            <div class="services__texts">
+              <h2 class="services__title"> MANICURE</h2>
+              <p class="services__paragraph"> Dale un toque de estilo a tus manos! 💅 
+                Descubre la magia de nuestras manicuras profesionales. 
+                Colores vibrantes, diseños elegantes y un cuidado impecable para tus uñas. 
+                Reserva tu cita y deja que tus manos hablen por ti. </p>
+              <a href="#" class="services__cta">Ver más</a>
+            </div>
+      
+            <div class="services__image service__image--2"></div>
+      
+            <div class="services__texts services__texts--2">
+              <h2 class="services__title"> PESTAÑAS</h2>
+              <p class="services__paragraph"> Potencia tu mirada con nuestras extensiones de pestañas. 🌟 
+                Resalta tu belleza natural con pestañas largas y exuberantes. 
+                ¡Haz que tus ojos brillen con cada parpadeo! Reserva tu cita para una mirada cautivadora. ✨</p>
+              <a href="#" class="services__cta">Ver más</a>
+            </div>
+
+            <div class="services__image service__image--3"></div>
+
+            <div class="services__texts services__texts--3">
+                <h2 class="services__title"> CUIDADO FACIAL</h2>
+                <p class="services__paragraph"> Regálate un momento de lujo para tu piel. ✨ 
+                    Descubre la pureza y frescura con nuestros tratamientos de cuidado facial. 
+                    Deja que tu piel respire y brille con una limpieza profunda. 
+                    Reserva tu sesión para revitalizar tu piel y resaltar tu belleza natural. 💆‍♀️✨</p>
+                <a href="#" class="services__cta">Ver más</a>
+            </div>
+        
+            <div class="services__image service__image--4"></div>
+        
+            <div class="services__texts services__texts--4">
+                <h2 class="services__title"> MAQUILLAJE</h2>
+                <p class="services__paragraph"> ¡Resalta tu belleza con nuestro arte del maquillaje! 💄 
+                    Descubre looks irresistibles y radiantes que resaltan lo mejor de ti. 
+                    Desde maquillaje natural hasta looks audaces, estamos aquí para realzar tu confianza. 
+                    Reserva tu sesión y déjanos crear magia en tu rostro. ✨ </p>
+                <a href="#" class="services__cta">Ver más</a>
+            </div>
+           </div>
+
+        </section>
+
+
+        {{-- servicios
+        <section class="services section" id="services">
             <div class="services__content">
                 <div class="row">
                     <div class="section__title2">
@@ -236,29 +295,31 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- PRODUCTS SECTION -->
         <x-productos />
 
+        
         <!-- TESTIMONIALS SECTION -->
         <section class="testimonials section" id="testimonios">
             <div class="row">
                 <div class="section__title2">
                     <h1>TESTIMONIOS</h1>
-                    <span>Veja o que nossos clientes tem a dizer</span>
+                    <span>Vea lo que nuestros clientes tienen que decir</span>
                 </div>
             </div>
+            
             <div class="testimonials__content">
                 
                 <div class="testimonials__card container grid">
                     <div class="testimonials__item flex">
                         <div class="testimonials__img">
-                            <img src="/IMG/fondo1.jpg" alt="">
+                            <img src="/IMG/mujer1.jpg" alt="">
                         </div>
                         <div class="testimonials__box">
                             <div class="testimonials__name">
-                                <h1>Celaena</h1>
+                                <h1>Julieta</h1>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
@@ -266,18 +327,18 @@
                                 <i class='bx bxs-star star__icon' ></i>
                             </div>
                             <div class="testimonials__descripition">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quidem quo saepe quibusdam nobis quas minima!</p>
+                                <p>"Poseen tratamientos de alta calidad. 
+                                    Una experiencia de belleza y relajación inigualable."</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonials__item flex">
                         <div class="testimonials__img">
-                            <img src="/IMG/fondo2.jpg" alt="">
+                            <img src="/IMG/hombre1.jpg" alt="">
                         </div>
                         <div class="testimonials__box">
                             <div class="testimonials__name">
-                                <h1>Aelin</h1>
+                                <h1>Marcus</h1>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
@@ -285,18 +346,18 @@
                                 <i class='bx bxs-star star__icon' ></i>
                             </div>
                             <div class="testimonials__descripition">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quidem quo saepe quibusdam nobis quas minima!</p>
+                                <p>"El centro de belleza es simplemente encantador, 
+                                    ¡Una experiencia que siempre deja una impresión positiva!"</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonials__item flex">
                         <div class="testimonials__img">
-                            <img src="/IMG/fondo3.jpg" alt="">
+                            <img src="/IMG/hombre2.jpg" alt="">
                         </div>
                         <div class="testimonials__box">
                             <div class="testimonials__name">
-                                <h1>Luciana</h1>
+                                <h1>Samuel</h1>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
@@ -304,18 +365,18 @@
                                 <i class='bx bxs-star star__icon' ></i>
                             </div>
                             <div class="testimonials__descripition">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quidem quo saepe quibusdam nobis quas minima!</p>
+                                <p>"Este centro de belleza es un oasis de elegancia y cuidado. 
+                                   Ideal para quienes buscan lo mejor en cuidado y bienestar."</p>
                             </div>
                         </div>
                     </div>
                     <div class="testimonials__item flex">
                         <div class="testimonials__img">
-                            <img src="/IMG/fondo4.jpg" alt="">
+                            <img src="/IMG/mujer2.jpg" alt="">
                         </div>
                         <div class="testimonials__box">
                             <div class="testimonials__name">
-                                <h1>Patricia</h1>
+                                <h1>Vero</h1>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
                                 <i class='bx bxs-star star__icon' ></i>
@@ -323,8 +384,8 @@
                                 <i class='bx bxs-star star__icon' ></i>
                             </div>
                             <div class="testimonials__descripition">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Quidem quo saepe quibusdam nobis quas minima!</p>
+                                <p>"En un destino ideal para consentirse. Lo amé mucho
+                                    ¡Una joya en el mundo del bienestar!"</p>
                             </div>
                         </div>
                     </div>

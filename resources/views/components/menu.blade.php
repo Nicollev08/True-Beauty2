@@ -12,7 +12,7 @@
 <body>
     <header action="/index" class="header">
 
-        <a href="#" class="logo">
+        <a href="#home" class="logo">
             <img src="/IMG/logo.png" alt="">
             
         </a>
@@ -24,7 +24,7 @@
             <a style="text-decoration:none" href="#servicios">Servicios</a>
             <a style="text-decoration:none" href="#catalogo">Agendar cita</a>
             <a style="text-decoration:none" href="{{route('productos.index')}}">Productos</a>
-            <a style="text-decoration:none" href="redes">Redes</a>
+            <a style="text-decoration:none" href="#redes">Redes</a>
         </nav>
     </header>
     <script src="JS/index.js"></script>

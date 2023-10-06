@@ -38,6 +38,7 @@ class ProductController extends Controller
         $data['imagen']=$rutaImagen;
         Product::create($data);
         return redirect()->route('productos.index');
+
     }
 
     /**
