@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TestimonyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -38,4 +40,10 @@ Route::get('/services', [HomeController::class, 'viewservices']);
 Route::get('/contra', [LoginController::class, 'contra']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
+
+Route::get('/productos', [HomeController::class, 'viewproductos']);
+
+Route::resource('/productoss', ProductController::class )->names('productos');
+
+Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
 
