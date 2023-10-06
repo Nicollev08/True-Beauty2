@@ -220,7 +220,11 @@ a{
     justify-content: center;
     align-items: center;
     background: white;
-    height: 90vh;
+    padding: 1rem;
+    
+}
+.contip{
+    
 }
 .tipcontainer{
     display: flex;
@@ -228,15 +232,15 @@ a{
     width: 100%px;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 3rem;
 }
 .tipcontainer .tip{
-    flex: 0 0 calc(33.33% - 20px); /* Esto distribuirá las tarjetas en filas de tres */
+    flex: 0 0 calc(33.33% - 20px); 
     margin: 30px;
     max-width: 500px;
     height: 300px;
     background: white;
-    padding: 20px 15px;
+    padding: 5px 15px;
     box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 }
@@ -254,13 +258,15 @@ a{
 
 }
 .tipcontainer .tip .imgBx img{
-    max-width: 100%;
+    width: 100%; 
+    height: 180%; 
+    object-fit: cover; 
     border-radius: 4px;
 }
 .tipcontainer .tip .content{
     position: relative;
     margin-top: -140px;
-    padding: 10px 15px;
+    padding: 0px 15px;
     text-align: center;
     color: #111;
     visibility: hidden;
@@ -341,12 +347,15 @@ a{
 
 
 /* services */
-
+.servicios{
+    padding: 2rem;
+}
 .services {
     width: 100%;
     display: grid;
     grid-template-rows: repeat(2, 250px 400px);
     gap: 30px;
+    padding: 2rem;
 }
 
 
@@ -369,21 +378,19 @@ a{
 .services__image--3 {
     background-size: cover;
     background-position: center;
-    /* Agrega estilos específicos para la tercera imagen si es necesario */
 }
 
 .services__texts--3 {
-    /* Agrega estilos específicos para el tercer conjunto de textos si es necesario */
+
 }
 
 .services__image--4 {
     background-size: cover;
     background-position: center;
-    /* Agrega estilos específicos para la cuarta imagen si es necesario */
 }
 
 .services__texts--4 {
-    /* Agrega estilos específicos para el cuarto conjunto de textos si es necesario */
+    --color: hsla(7, 99%, 70%, 0.267);
 }
 
 .services__title {
@@ -531,75 +538,19 @@ a{
     width: 100%;
     height: 100%;
 } */
-/*PACKAGE */
-.package{
-    width: 100%;
-    background-color: var(--rosa-color);
-    border-radius: 0 300px;
-}
-.package__cards{
-    margin-top: var(--mb-2-5);
-}
-.product{
-    height: 360px;
-    background-color: var(--white-color);
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.25);
-    border-radius: 30px;
-    padding: 1.5rem;
-    margin: 10px auto;
-    transition: all 400ms ease-in-out;
-}
-.product:hover{
-    transform: scale(1.1);
-}
-.product__title{
-    text-align: center;
-    margin-bottom: var(--mb-1-5);
-}
-.product__title h1{
-    font-weight: var(--font-bold);
-    font-size: var(--h1-font-size);
-    line-height: var(--h1-font-size);
-    color: var(--black-color);
-}
-.product__items{
-    margin-bottom: var(--mb-1);
-}
-.item{
-    display: flex;
-    align-items: center;
-}
-.item p{
-    font-weight: var(--font-bold);
-    line-height: calc(var(--normal-font-size) + 10px);
-    color: var(--cafe-color);
-    margin-left: var(--mb-05);
-}
-.item p span{
-    font-size: var(--small-font-size);
-    font-weight: var(--font-light);
-}
-.item .x__icon, .item .check__icon{
-    font-size: var(--h3-font-size);
-}
-.item .x__icon, .item .not{
-    color: var(--second-color);
-}
-.item .check__icon{
-    color: var(--cafe-color);
-}
-.product__items button{
-    margin: 0 auto;
-    margin-top: var(--mb-1);
-}
+
+
+
 
 /* TESTIMONIALS */
 .testimonials{
     background-color: var(--white-color);
     border-radius: 300px 0;
+    padding: 0;
 }
+
 .testimonials__content{
-    padding: 2rem;
+    padding: 3rem;
     
 }
 .testimonials__card{
