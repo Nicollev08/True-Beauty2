@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +17,6 @@
 <body>
     
     <!--MENU-->
-    
     <x-menu />
 
     
@@ -31,18 +29,23 @@
                 <br>
                 <p>Enamórate de cuidarte</p>
                 <p>Enamórate de ti.</p>
+                
                 <a href="#" class="btn btn__outline"><i class="fa-solid fa-calendar-days"></i>   Agendar cita   </a>
             </div>
         </section>
+
        <!--TIPS-->
-       <section class="tips">
-        <div class="contip">
+       <section class="tips" id="tips">
+        
             <div class="row">
                 <div class="section__title2">
                     <h1>TIPS DE BELLEZA</h1>
                     <span></span>
                 </div>
             </div>
+
+            <div class="contip">
+
             <div class="tipcontainer">
                 <div class="tip">
                     <div class="imgBx">
@@ -102,12 +105,14 @@
                         <p>Las uñas son la carta de presentación de las manos. Por eso deben lucir limpias y sanas. Aplica limón antes de dormir, tus uñas estarán siempre limpias y fuertes para los días en que prefieras lucirlas al natural.</p>
                     </div>
                 </div>
+                
             </div>
+           <a href="/tips"class="opbtn1">VER MÁS</a>
         </div>
     
        </section>
      
-        <!-- ABOUT US SECTION -->
+        <!-- ABOUT  SECTION -->
         <section class="about" id="about">
             <div class="about__content">
                 <div class="row">
@@ -179,130 +184,73 @@
         </section>
 
         <!-- SERVICES SECTION -->
-        <section class="servicios">
-            <div class="row">
-                <div class="section__title2">
-                    <h1>SERVICIOS</h1>
-                    <span></span>
-                </div>
-            </div>
-           <div class="services">
-            
-            <div class="services__image service__image--1"></div>
-      
-            <div class="services__texts">
-              <h2 class="services__title"> MANICURE</h2>
-              <p class="services__paragraph"> Dale un toque de estilo a tus manos! 💅 
-                Descubre la magia de nuestras manicuras profesionales. 
-                Colores vibrantes, diseños elegantes y un cuidado impecable para tus uñas. 
-                Reserva tu cita y deja que tus manos hablen por ti. </p>
-              <a href="#" class="services__cta">Ver más</a>
-            </div>
-      
-            <div class="services__image service__image--2"></div>
-      
-            <div class="services__texts services__texts--2">
-              <h2 class="services__title"> PESTAÑAS</h2>
-              <p class="services__paragraph"> Potencia tu mirada con nuestras extensiones de pestañas. 🌟 
-                Resalta tu belleza natural con pestañas largas y exuberantes. 
-                ¡Haz que tus ojos brillen con cada parpadeo! Reserva tu cita para una mirada cautivadora. ✨</p>
-              <a href="#" class="services__cta">Ver más</a>
-            </div>
-
-            <div class="services__image service__image--3"></div>
-
-            <div class="services__texts services__texts--3">
-                <h2 class="services__title"> CUIDADO FACIAL</h2>
-                <p class="services__paragraph"> Regálate un momento de lujo para tu piel. ✨ 
-                    Descubre la pureza y frescura con nuestros tratamientos de cuidado facial. 
-                    Deja que tu piel respire y brille con una limpieza profunda. 
-                    Reserva tu sesión para revitalizar tu piel y resaltar tu belleza natural. 💆‍♀️✨</p>
-                <a href="#" class="services__cta">Ver más</a>
-            </div>
-        
-            <div class="services__image service__image--4"></div>
-        
-            <div class="services__texts services__texts--4">
-                <h2 class="services__title"> MAQUILLAJE</h2>
-                <p class="services__paragraph"> ¡Resalta tu belleza con nuestro arte del maquillaje! 💄 
-                    Descubre looks irresistibles y radiantes que resaltan lo mejor de ti. 
-                    Desde maquillaje natural hasta looks audaces, estamos aquí para realzar tu confianza. 
-                    Reserva tu sesión y déjanos crear magia en tu rostro. ✨ </p>
-                <a href="#" class="services__cta">Ver más</a>
-            </div>
-           </div>
-
-        </section>
-
-
-        {{-- servicios
-        <section class="services section" id="services">
-            <div class="services__content">
+        <section class="servicios" id="servicios">
+            <div class="servicecontent">
                 <div class="row">
                     <div class="section__title2">
                         <h1>SERVICIOS</h1>
-                        <span>QUE REALIZAMOS</span>
+                        <span></span>
                     </div>
                 </div>
-                <div class="services__content__descripion grid container">
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/manicure.png" alt="">
-                            <p>MANICURE</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/pedicure.png" alt="">
-                            <p>PEDICURE</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/maquiagem.png" alt="">
-                            <p>MAQUILLAJE</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/pentado.png" alt="">
-                            <p>TRATAMIENTOS</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/corte.png" alt="">
-                            <p>CORTES</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/sobrancelha.png" alt="">
-                            <p>CEJAS Y PESTAÑAS</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/depilacao.png" alt="">
-                            <p>DEPILACIÓN</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="inner">
-                            <img src="/IMG/limpeza.png" alt="">
-                            <p>LIMPIEZA FACIAL</p>
-                        </div>
-                    </div>
+               <div class="services">
+                
+                <div class="services__image service__image--1"></div>
+          
+                <div class="services__texts">
+                  <h2 class="services__title"> MANICURE</h2>
+                  <p class="services__paragraph"> Dale un toque de estilo a tus manos! 💅 
+                    Descubre la magia de nuestras manicuras profesionales. 
+                    Colores vibrantes, diseños elegantes y un cuidado impecable para tus uñas. 
+                    Reserva tu cita y deja que tus manos hablen por ti. </p>
+                  <a href="#" class="services__cta">Ver más</a>
                 </div>
+          
+                <div class="services__image service__image--2"></div>
+          
+                <div class="services__texts services__texts--2">
+                  <h2 class="services__title"> PESTAÑAS</h2>
+                  <p class="services__paragraph"> Potencia tu mirada con nuestras extensiones de pestañas. 🌟 
+                    Resalta tu belleza natural con pestañas largas y exuberantes. 
+                    ¡Haz que tus ojos brillen con cada parpadeo! Reserva tu cita para una mirada cautivadora. ✨</p>
+                  <a href="#" class="services__cta">Ver más</a>
+                </div>
+    
+                <div class="services__image service__image--3"></div>
+    
+                <div class="services__texts services__texts--3">
+                    <h2 class="services__title"> CUIDADO FACIAL</h2>
+                    <p class="services__paragraph"> Regálate un momento de lujo para tu piel. ✨ 
+                        Descubre la pureza y frescura con nuestros tratamientos de cuidado facial. 
+                        Deja que tu piel respire y brille con una limpieza profunda. 
+                        Reserva tu sesión para revitalizar tu piel y resaltar tu belleza natural. 💆‍♀️✨</p>
+                    <a href="#" class="services__cta">Ver más</a>
+                </div>
+            
+                <div class="services__image service__image--4"></div>
+            
+                <div class="services__texts services__texts--4">
+                    <h2 class="services__title"> MAQUILLAJE</h2>
+                    <p class="services__paragraph"> ¡Resalta tu belleza con nuestro arte del maquillaje! 💄 
+                        Descubre looks irresistibles y radiantes que resaltan lo mejor de ti. 
+                        Desde maquillaje natural hasta looks audaces, estamos aquí para realzar tu confianza. 
+                        Reserva tu sesión y déjanos crear magia en tu rostro. ✨ </p>
+                    <a href="#" class="services__cta">Ver más</a>
+                </div>
+                
+               </div>
+               <a href="/services"class="opbtn1">VER MÁS</a>
             </div>
-        </section> --}}
+           
+        </section>
+
+
 
         <!-- PRODUCTS SECTION -->
         <x-productos />
 
         
         <!-- TESTIMONIALS SECTION -->
-        <section class="testimonials section" id="testimonios">
+        <section class="testimonials section centered" id="testimonios">
             <div class="row">
                 <div class="section__title2">
                     <h1>TESTIMONIOS</h1>
@@ -390,7 +338,9 @@
                         </div>
                     </div>
                 </div>
+                <a href=""class="opbtn">VER MÁS</a>
             </div>
+            
         </section>
     </main>
 

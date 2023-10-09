@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\TestimonyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProductController;
 
 
 
@@ -35,15 +34,19 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/services', [HomeController::class, 'viewservices']);
-
 Route::get('/contra', [LoginController::class, 'contra']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
 
+
+
+Route::get('/tips', [HomeController::class, 'viewtips']);
+
+Route::get('/services', [HomeController::class, 'viewservices']);
+
 Route::get('/productos', [HomeController::class, 'viewproductos']);
 
-Route::resource('/productos', ProductController::class);
+Route::get('/crudproductos', 'ProductController@index')->name('home.masproductos');
+
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
-

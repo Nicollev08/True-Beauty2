@@ -1,93 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap&family=Montserrat:wght@300;400;700;800&display=swap');
+:root {
+  --header-height: 6.25rem;
 
-.card {
-  width: 20rem; 
-  border: 1px solid #ccc; 
-  border-radius: 15px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  text-align: center;
+  /*---------------COLLORS -------------------*/
+  --rosa-color: #e4b2c6a9;
+  --cafe-color: #4f321f;
+  --amarillo-color: #dfd6a7;
+  --white-color: #ffffff;
+  --black-color: #151515;
+  --fuccia-color: rgb(219, 103, 149);
+
+  /*---------------FONT  AND TYPOGRAPHY-------------------*/
+  --font-cursive: 'Gelasio', cursive;
+  --body-font: 'Montserrat', sans-serif;
+  --big-font-size: 3rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+
+  /*---------------FONT WEIGHT-------------------*/
+  --font-light: 300;
+  --font-medium: 400;
+  --font-semi-bold: 700;
+  --font-bold: 800;
+
+  /*---------------MARGINS-------------------*/
+  --mb-05: 0.5rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*---------------Z INDEXS-------------------*/
+  --Z-fixed: 100;
+  --z-tooltip: 10;
+  --z_negative: -1;
 }
-*{
+/* base */
+*, ::after, ::before{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+main{
+  position: relative;
+  padding-top: 120px;
 }
 body{
-  background: #f0f0f0;
+  background-color: var(--white-color);
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  overflow-x: hidden;
 }
-.container{
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.section{
+  padding: calc(var(--header-height) + 20px) 0;
+}
+.grid{
+  display: grid;
+  gap: 20px;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__title {
+  margin: 0 auto;
+  text-align: center;
+}
+.section__title2 {
+  margin: 0 auto;
+  text-align: center;
+}
+.section__title h1{
+  font-family: var(--font-cursive);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+  line-height: var(--big-font-size);
+  color: var(--rosa-color);
+}
+.section__title2 h1{
+  font-family: var(--font-cursive);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+  line-height: var(--big-font-size);
+  color: var(--black-color);
+}
+.section__title span{
+  font-weight: var(--font-light);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-font-size);
+  color: var(--white-color);
+}
+
+
+.servicios{
+  padding: 2rem;
+}
+.servicecontent{
+  text-align: center;
+  position: relative;
+  align-items: center;
+}
+
+.services {
   width: 100%;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 100px;
+  display: grid;
+  grid-template-rows: repeat(2, 250px 400px);
+  gap: 30px;
+  padding: 2rem;
 }
-.lbl-menu{
-  background: #234;
+
+
+.services__image {
+  background-size: cover;
+  background-position: center;
 }
-.lbl-menu label{
-  display: inline-block;
-  padding: 20px;
-  color: #fff;
-  cursor: pointer;
-  transition: all 400ms ease;
+
+.services__texts {
+  padding: 1rem 1.5rem;
+  place-self: center;
+  text-align: center;
+  --color: hsla(51, 100%, 49%, 0.263);
 }
-.lbl-menu label:hover{
-  background: #28435d;
+
+.services__texts--2 {
+  --color: hsla(7, 99%, 70%, 0.267);
 }
-.content{
+
+.services__image--3 {
+  background-size: cover;
+  background-position: center;
+}
+
+.services__texts--3 {
+
+}
+
+.services__image--4 {
+  background-size: cover;
+  background-position: center;
+}
+
+.services__texts--4 {
+  --color: hsla(7, 99%, 70%, 0.267);
+}
+
+.services__title {
+  font-size: 2rem;
+  font-family: var(--font-cursive);
+  color: var(--black-color);
+}
+
+.services__paragraph {
+  line-height: 1.5;
+  color: var(--cafe-color);
+  margin: 1.5rem 0;
+}
+
+.services__cta {
+  color: var(--black-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var();
+
   position: relative;
 }
-.content div{
- 
-  line-height: 1.8;
-  transition: all 600ms ease;
-  
-  
-  transform: scale(0.90);
-  padding: 30px;
-  background: #fff;
-  padding-bottom: 40px;
-}
-#radio1,#radio2,#radio3,#radio4{
-  display: none;
-}
-#radio1:checked ~ .tab1,
-#radio2:checked ~ .tab2,
-#radio3:checked ~ .tab3,
-#radio4:checked ~ .tab4
-{
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-}
-.content div:after{
-  position: absolute;
+
+.services__cta::before {
   content: "";
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid #fff;
-  bottom: 100%;
-  left: 28px;
-}
-.content .tab2:after{
-  left: 122px;
-}
-.content .tab3:after{
-  left: 210px;
-}
-.content .tab4:after{
-  left: 303px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  border-radius: 2em;
+  z-index: -1;
+  background-color: var(--color);
 }
 
+.opbtn1 {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--fuccia-color);
+  border: 1px solid var(--white-color);
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  font-size: 14px;
+  transition: all 0.2s;
+  text-align: center;
+  position: relative;
+  
+
+   /* Esto coloca el botón al final */
+}
+
+.opbtn1:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: #fea9c5;
+  border: 1px solid var(--fuccia-color);
+}
 
 
+@media (min-width:768px) {
+
+    .services {
+        grid-template-rows: repeat(4, 500px);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "img1 text1"
+            "img2 text2"
+            "img3 text3" 
+            "img4 text4";
+    }
 
 
+    .services__image {
+        background-image: url('/IMG/uñas.jpg');
+        grid-area: img1;
+    }
+
+    .services__texts {
+
+        text-align: start;
+        grid-area: text1;
+        padding: 2rem 3rem;
+    }
+
+    .services__texts--2 {
+        grid-area: text2;
+    }
 
 
+    .service__image--2 {
+        background-image: url('/IMG/pestañas.jpg');
+        grid-area: img2;
+    }
 
+    .service__image--3 {
+        background-image: url('/IMG/facial.jpg'); 
+        grid-area: img3;
+    }
+
+    .services__texts--3 {
+        grid-area: text3;
+        
+    }
+
+    .service__image--4 {
+        background-image: url('/IMG/maquillaje.jpg'); 
+        grid-area: img4;
+    }
+
+    .services__texts--4 {
+        grid-area: text4;
+    }
+
+}
 
 
 

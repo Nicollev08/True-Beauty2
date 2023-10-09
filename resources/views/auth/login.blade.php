@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url('assets/css/login.css') }}">
-    <link rel="shortcut icon" href="/IMG/logotrue.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
     <title>Iniciar sesión</title>
 </head>
 
@@ -22,8 +22,8 @@
             <h4 class="form-title">INICIAR SESIÓN</h4>
             
             
-            <input type="text" name="name" placeholder="Ingrese su nombre" autofocus>
-            <input type="password" name="password" placeholder="Ingrese su contraseña">
+            <input type="text" id="name" name="name" placeholder="Ingrese su nombre">
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
             <a class="link" href="/contra">Recuperar Contraseña</a>
 
             <button class="button" type="submit">Ingresar</button>
