@@ -37,7 +37,7 @@ class ProductController extends Controller
         $data = $request->only('name','description');
         $data['imagen']=$rutaImagen;
         Product::create($data);
-        return redirect()->route('productos.index');
+        return redirect()->route('home.masproductos');
 
     }
 

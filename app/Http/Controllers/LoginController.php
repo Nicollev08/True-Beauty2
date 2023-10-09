@@ -30,6 +30,6 @@ class LoginController extends Controller
         return redirect('/home');
     }
     public function contra(){
-        return view('auth.password');
+        return view('auth.contra');
     }
 }

@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Formulario productos</h1>
-    <form action="{{route('productos.index')}}" method="Post" enctype="multipart/form-data"> 
+    <form action="{{route('home.masproductos')}}" method="Post" enctype="multipart/form-data"> 
         @csrf
         <label for="nombre">Nombre :</label>
         <input type="text" id="nombre" name="name" required><br><br>

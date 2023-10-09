@@ -4,100 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <title>Servicios</title>
+    <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{ url('assets/css/services.css') }}">
+    <title>SERVICIOS</title>
 </head>
 <body>
 
   <x-menu />
 
   <main>
-    <section>
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class="container-fluid">
-            <div class="row justify-content-center"> <!-- Utiliza justify-content-center para centrar las columnas horizontalmente -->
-              <div class="col-md-2 mx-auto"> <!-- Utiliza mx-auto para centrar el contenido de la columna horizontalmente -->
-                <div class="card" >
-                  <img src="/IMG/cabello.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
+    <section class="servicios">
+      <div class="servicecontent">
+          <div class="row">
+              <div class="section__title2">
+                  <h1>SERVICIOS</h1>
+                  <span></span>
               </div>
-        
-              <div class="col-md-2 mx-auto"> <!-- Utiliza mx-auto para centrar el contenido de la columna horizontalmente -->
-                <div class="card" >
-                  <img src="/IMG/cabello.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="col-md-2 mx-auto"> <!-- Utiliza mx-auto para centrar el contenido de la columna horizontalmente -->
-                <div class="card" >
-                  <img src="/IMG/cabello.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="col-md-2 mx-auto"> <!-- Utiliza mx-auto para centrar el contenido de la columna horizontalmente -->
-                <div class="card" >
-                  <img src="/IMG/cabello.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="col-md-2 mx-auto"> <!-- Utiliza mx-auto para centrar el contenido de la columna horizontalmente -->
-                <div class="card" >
-                  <img src="/IMG/cabello.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-    
-            </div>
           </div>
-        </div>
+         <div class="services">
+          
+          <div class="services__image service__image--1"></div>
     
-        </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">ddddd</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">  vvvv</div>
+          <div class="services__texts">
+            <h2 class="services__title"> MANICURE</h2>
+            <p class="services__paragraph"> Dale un toque de estilo a tus manos! 💅 
+              Descubre la magia de nuestras manicuras profesionales. 
+              Colores vibrantes, diseños elegantes y un cuidado impecable para tus uñas. 
+              Reserva tu cita y deja que tus manos hablen por ti. </p>
+            <a href="#" class="services__cta">Ver más</a>
+          </div>
+    
+          <div class="services__image service__image--2"></div>
+    
+          <div class="services__texts services__texts--2">
+            <h2 class="services__title"> PESTAÑAS</h2>
+            <p class="services__paragraph"> Potencia tu mirada con nuestras extensiones de pestañas. 🌟 
+              Resalta tu belleza natural con pestañas largas y exuberantes. 
+              ¡Haz que tus ojos brillen con cada parpadeo! Reserva tu cita para una mirada cautivadora. ✨</p>
+            <a href="#" class="services__cta">Ver más</a>
+          </div>
+
+          <div class="services__image service__image--3"></div>
+
+          <div class="services__texts services__texts--3">
+              <h2 class="services__title"> CUIDADO FACIAL</h2>
+              <p class="services__paragraph"> Regálate un momento de lujo para tu piel. ✨ 
+                  Descubre la pureza y frescura con nuestros tratamientos de cuidado facial. 
+                  Deja que tu piel respire y brille con una limpieza profunda. 
+                  Reserva tu sesión para revitalizar tu piel y resaltar tu belleza natural. 💆‍♀️✨</p>
+              <a href="#" class="services__cta">Ver más</a>
+          </div>
+      
+          <div class="services__image service__image--4"></div>
+      
+          <div class="services__texts services__texts--4">
+              <h2 class="services__title"> MAQUILLAJE</h2>
+              <p class="services__paragraph"> ¡Resalta tu belleza con nuestro arte del maquillaje! 💄 
+                  Descubre looks irresistibles y radiantes que resaltan lo mejor de ti. 
+                  Desde maquillaje natural hasta looks audaces, estamos aquí para realzar tu confianza. 
+                  Reserva tu sesión y déjanos crear magia en tu rostro. ✨ </p>
+              <a href="#" class="services__cta">Ver más</a>
+          </div>
+          
+         </div>
+         <a href="/home"class="opbtn1">REGRESAR</a>
       </div>
-    
-    </section>
+     
+  </section>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
 </body>
 </html>

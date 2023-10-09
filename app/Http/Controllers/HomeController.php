@@ -19,7 +19,11 @@ class HomeController extends Controller
     }
 
     public function viewproductos(){
-        return view('home.describe');
+        return view('home.masproductos');
+    }
+
+    public function viewtips(){
+        return view('home.tips');
     }
    
 }
