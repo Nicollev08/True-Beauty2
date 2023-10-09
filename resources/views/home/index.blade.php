@@ -43,7 +43,9 @@
                     <span></span>
                 </div>
             </div>
-
+@guest
+    
+@endguest
             <div class="contip">
 
             <div class="tipcontainer">
@@ -215,11 +217,11 @@
                   <a href="#" class="services__cta">Ver más</a>
                 </div>
     
-                <div class="services__image service__image--3"></div>
+                <div class="services__image service__image--3" id="imgservice"></div>
     
                 <div class="services__texts services__texts--3">
-                    <h2 class="services__title"> CUIDADO FACIAL</h2>
-                    <p class="services__paragraph"> Regálate un momento de lujo para tu piel. ✨ 
+                    <h2 class="services__title" id="nameservice"> CUIDADO FACIAL</h2>
+                    <p class="services__paragraph" id="descripcionservice"> Regálate un momento de lujo para tu piel. ✨ 
                         Descubre la pureza y frescura con nuestros tratamientos de cuidado facial. 
                         Deja que tu piel respire y brille con una limpieza profunda. 
                         Reserva tu sesión para revitalizar tu piel y resaltar tu belleza natural. 💆‍♀️✨</p>

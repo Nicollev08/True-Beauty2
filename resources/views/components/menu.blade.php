@@ -38,11 +38,12 @@
             <div class="dropdown">
                 <button class="dropbtn"><i class="fa-solid fa-user-plus" style="color: #fdfdfd;"></i></button>
                 <div class="dropdown-content">
-                    <a class="option" href="/login">Editar perfil</a>
-                    <a class="option" href="/register">Cerrar sesión</a>
+                    <a class="option" href="#">Editar perfil</a>
+                    <a class="option" href="/logout">Cerrar sesión</a>
                 </div>
             </div>
             @endauth
+
         </nav>
        
     </header>

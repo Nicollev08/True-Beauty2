@@ -1,3 +1,6 @@
+:root{
+  --fuccia-color: rgb(214, 83, 135);
+}
 body {
     min-height: 100vh;
     display: flex;
@@ -67,7 +70,7 @@ body {
   }
   .form-register  input[type="text"]:focus, .form-register input[type="email"]:focus, .form-register input[type="password"]:focus {
     width: 280px;
-    border-color: rgba(203, 17, 129, 0.728);
+    border-color: var(--fuccia-color);
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
@@ -89,7 +92,7 @@ body {
   }
   
   .form-register a:hover {
-    color: rgba(203, 17, 129, 0.804);
+    color: var(--fuccia-color);
   }
   
   .button[type="submit"]{
@@ -97,7 +100,7 @@ body {
     position: relative;
     top: -70px;
     border: 0;
-    background: rgba(203, 17, 129, 0.728);
+    background: var(--fuccia-color);
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -112,7 +115,7 @@ body {
   }
   
   .button[type="submit"]:hover{
-    background: none;
+    background: #dc9bb1;
     color: black;
   }
   
