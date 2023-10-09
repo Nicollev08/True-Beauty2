@@ -67,6 +67,20 @@
                   Reserva tu sesión y déjanos crear magia en tu rostro. ✨ </p>
               <a href="#" class="services__cta">Ver más</a>
           </div>
+
+                  
+        {{-- @foreach($services as $service)
+        
+        <div class="id" {{ $service->id }}></div>
+            <div class="services__image service__image--">{{ $service->image }}</div>
+            <div class="services__texts">
+                <h2 class="services__title">{{ $service->title }}</h2>
+                <p class="services__paragraph">{{ $service->description }}</p>
+                <a href="#" class="services__cta">Ver más</a>
+            </div>
+        @endforeach --}}
+
+
           
          </div>
          <a href="/home"class="opbtn1">REGRESAR</a>

@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminController;
 
 
 
@@ -50,3 +51,8 @@ Route::get('/crudproductos', 'ProductController@index')->name('home.masproductos
 
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
+
+
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});

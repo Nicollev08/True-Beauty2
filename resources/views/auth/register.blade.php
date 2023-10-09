@@ -17,7 +17,9 @@
       
         <form action="/register" method="POST" class="form-register" class="form-box animated fadeInUp" width="200" height="200">
             @csrf
-            
+            <div class="contenedor">
+                <img class="class" src="/IMG/logo.png" >
+           </div>
             <h4>REGISTRO</h4>
             <input type="text" name="name" id="name" placeholder="Ingrese su Nombre" autofocus>
             <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido" autofocus>

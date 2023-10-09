@@ -14,21 +14,29 @@ class LoginController extends Controller
         }
         return view('auth.login');
     }
+
     public function login(LoginRequest $request){
         $credentials = $request->getCredentials();
 
         if(!Auth::validate($credentials)){
             return redirect()->to('/login')->withErrors('auth.failed');
         }
+
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
 
         Auth::login($user);
 
+        if ($user->role == 'admin') {
+            return redirect()->route('admin.index');
+        }
+
         return $this->authenticated($request, $user);
     }
+
     public function authenticated(Request $request, $user){
         return redirect('/home');
     }
+
     public function contra(){
         return view('auth.contra');
     }
