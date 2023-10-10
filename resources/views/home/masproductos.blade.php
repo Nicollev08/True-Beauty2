@@ -26,94 +26,30 @@
 					<span>Ven y aprovecha todas nuestras promociones</span>
 				</div>
 			</div>
+			
 			<div class="productscontent">
 				<div class="all-products">
+					@foreach($products as $product)
 					<div class="product">
-						<img src="/IMG/cremafacial.jpg">
+						<img src="{{ asset('storage/' . $product->image) }}" alt="">
 						<div class="product-info">
-							<h4 class="product-title">Crema facial
+							<h4 class="product-title">{{ $product->name }}
 							</h4>
-							<p class="product-price">$12.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/pestañina.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Rimel
-							</h4>
-							<p class="product-price">$8.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/labial.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Labial
-							</h4>
-							<p class="product-price">$10.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/rubor.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Rubor
-								</h4>
-							<p class="product-price">$5.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/baseliquida.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Base líquida
-								</h4>
-							<p class="product-price">$8.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/protector.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Protector solar
-								</h4>
-							<p class="product-price">$15.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/brochas.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Pinceles
-								</h4>
-							<p class="product-price">$15.000</p>
-							<a class="product-btn" href="#">Descripción</a>
-		
-						</div>
-					</div>
-					<div class="product">
-						<img src="/IMG/esmalte.jpg">
-						<div class="product-info">
-							<h4 class="product-title">Esmaltes
-								</h4>
-							<p class="product-price">$5.000</p>
+							<p class="product-price">{{ $product->precio }}</p>
 							<a class="product-btn" href="#">Descripción</a>
 		
 						</div>
 					</div>
 					
+					@endforeach
+
 				</div>
 				<a href="/home"class="opbtn2">REGRESAR</a>
 			</div>
 			
 		</section>
 	</main>
+
+
 </body>
 </html>

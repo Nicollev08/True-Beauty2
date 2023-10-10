@@ -11,36 +11,35 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('Admin.products');
-    }
+{
+   
+}
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        //
+        return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        $files = $request->file('imagen');
-        $name = $files->getClientOriginalName();
-        $estencion = $files->getClientOriginalExtension();
-
-        // $files->store('images', ['disk' => 'public']);
-        $rutaImagen = $files->storeAs('products',$name, ['disk' => 'public']);
-        $data = $request->only('name','description');
-        $data['imagen']=$rutaImagen;
-        Product::create($data);
-        return redirect()->route('home.masproductos');
-
+        $request->validate([
+            'name' => 'required',
+            'precio' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        $product = new Product($request->except('image'));
+    
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('product_images');
+            $product->image = 'product_images/' . basename($imagePath);
+        }
+    
+        $product->save();
+    
+        return redirect()->route('admin.index')->with('success', 'Product created successfully.');
     }
-
     /**
      * Display the specified resource.
      */

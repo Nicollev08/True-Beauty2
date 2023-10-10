@@ -23,7 +23,7 @@
             <a style="text-decoration:none" href="#tips">Tips</a>
             <a style="text-decoration:none" href="#about">¿Quiénes somos?</a>
             <a style="text-decoration:none" href="#servicios">Servicios</a>
-            <a style="text-decoration:none" href="{{route('home.masproductos')}}">Productos</a>
+            <a style="text-decoration:none" href="#">Productos</a>
             <a style="text-decoration:none" href="#redes">Redes</a>
             @guest
             <div class="dropdown">

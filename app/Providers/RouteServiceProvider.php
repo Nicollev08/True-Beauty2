@@ -19,6 +19,14 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
+    protected $middlewareGroups = [
+        'api' => [
+            'throttle:api',
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\VerifyCsrfToken::class, // Verifica si está presente
+        ],
+    ];
+
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
