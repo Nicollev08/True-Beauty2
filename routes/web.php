@@ -26,12 +26,11 @@ Route::get('/', function () {
 });
 
 Route::get('/register', [RegisterController::class, 'show']);
-
 Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/login', [LoginController::class, 'show']);
-
 Route::post('/login', [LoginController::class, 'login']);
+
 
 Route::get('/home', [HomeController::class, 'index']);
 
@@ -47,7 +46,12 @@ Route::get('/services', [HomeController::class, 'viewservices']);
 
 Route::get('/productos', [HomeController::class, 'viewproductos']);
 
-Route::get('/crudproductos', 'ProductController@index')->name('home.masproductos');
+
+Route::resource('products', ProductController::class);
+Route::get('/products', [ProductController::class, 'index']);
+
+
+Route::get('/admin', [ProductController::class, 'index'])->name('admin.index');
 
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');

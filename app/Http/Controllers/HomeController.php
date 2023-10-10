@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 
 
@@ -19,7 +20,8 @@ class HomeController extends Controller
     }
 
     public function viewproductos(){
-        return view('home.masproductos');
+        $products = Product::all();
+    return view('home.masproductos', compact('products'));
     }
 
     public function viewtips(){
