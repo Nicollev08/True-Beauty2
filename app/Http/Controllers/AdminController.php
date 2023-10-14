@@ -9,7 +9,9 @@ use App\Models\Product;
 class AdminController extends Controller
 {
     public function index(){
-        $products = Product::all();
-    return view('admin.index', compact('products'));
+        return view('admin.index');
     }
+
+    
+
 }

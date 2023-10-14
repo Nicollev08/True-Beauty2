@@ -39,6 +39,7 @@
                 <button class="dropbtn"><i class="fa-solid fa-user-plus" style="color: #fdfdfd;"></i></button>
                 <div class="dropdown-content">
                     <a class="option" href="#">Editar perfil</a>
+                    <a class="option" href="/admin">Dashboard</a>
                     <a class="option" href="/logout">Cerrar sesión</a>
                 </div>
             </div>

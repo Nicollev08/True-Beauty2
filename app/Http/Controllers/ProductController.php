@@ -11,14 +11,15 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-   
-}
+    {
+    $products = Product::all();
+    return view('admin.crudproducts.index', compact('products'));
+    }
 
 
     public function create()
     {
-        return view('products.create');
+
     }
 
     public function store(Request $request)
@@ -38,7 +39,7 @@ class ProductController extends Controller
     
         $product->save();
     
-        return redirect()->route('admin.index')->with('success', 'Product created successfully.');
+        return redirect()->route('product.index')->with('success', 'Product created successfully.');
     }
     /**
      * Display the specified resource.
