@@ -39,6 +39,18 @@ Route::get('/contra', [LoginController::class, 'contra']);
 Route::get('/logout', [LogoutController::class, 'logout']);
 
 
+Route::group(['middleware' => ['admin']], function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+});
+
+
+Route::get('/crudproduct', [ProductController::class, 'index'])->name('product.index');
+Route::resource('products', ProductController::class);
+
+
+
+
+
 
 Route::get('/tips', [HomeController::class, 'viewtips']);
 
@@ -47,16 +59,8 @@ Route::get('/services', [HomeController::class, 'viewservices']);
 Route::get('/productos', [HomeController::class, 'viewproductos']);
 
 
-Route::resource('products', ProductController::class);
-Route::get('/products', [ProductController::class, 'index']);
 
 
-Route::get('/admin', [ProductController::class, 'index'])->name('admin.index');
 
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
-
-
-Route::group(['middleware' => ['admin']], function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
-});
