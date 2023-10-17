@@ -16,13 +16,9 @@ body {
     justify-content: center;
     overflow: hidden;
   }
-  
-  .class{
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    width: 300px;
-    top: -30px;
+  .logo{
+    width: 200px;
+    padding: 20px;
   }
   .IMG{
     width:10%;
@@ -30,9 +26,9 @@ body {
     border-radius: 50px;
   }
   .form-box {
-    width: 400px;
-    height: 800px;
-    padding: 40px;
+    width: 450px;
+    height: 900px;
+    padding: 10px;
     border-radius: 50px;
     background:rgba(221, 221, 221, 0.493);
     text-align: center;

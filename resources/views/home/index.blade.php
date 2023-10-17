@@ -340,7 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <a href=""class="opbtn">VER MÁS</a>
+                <a href="/opiniones"class="opbtn">VER MÁS</a>
             </div>
             
         </section>

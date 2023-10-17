@@ -13,44 +13,7 @@
 
 
          <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Nuevo producto
-  </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nuevo producto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data" class="row gy-2 gx-3 align-items-center" >
-                @csrf
-                <input type="hidden" name="id" id="id" value="">
-                <div class="col-auto">
-                <label class="visually-hidden" for="name">Nombre producto</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
-              </div>
-              <div class="col-auto">
-                  <label class="visually-hidden" for="precio">Precio</label>
-                  <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="image">Imagen</label>
-                    <input class="form-control" type="file" id="image" name="image">
-                  </div>
-              
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-            </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
     
   <table class="table table-striped table-hover">
     <thead>
@@ -71,7 +34,7 @@
              <td>{{ $product->precio }}</td>
              
              <td>
-                <button type="button" class="btn btn-outline-success btn-actualizar" data-bs-toggle="modal" data-bs-target="#exampleModal">ACTUALIZAR</button>
+              <button type="button" class="btn btn-outline-success btn-actualizar" data-bs-toggle="modal" data-bs-target="#editModal{{ $product->id }}">ACTUALIZAR</button>
                 <form method="post" action="{{ route('products.destroy', ['product' => $product->id]) }}" style="display: inline;">
                    @csrf
                    @method('DELETE')
@@ -84,6 +47,85 @@
  </table>
  
 
+ <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Nuevo producto
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data" class="row gy-2 gx-3 align-items-center" >
+              @csrf
+              <input type="hidden" name="id" id="id" value="">
+              <div class="col-auto">
+              <label class="visually-hidden" for="name">Nombre producto</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="precio">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio" placeholder="Precio">
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="image">Imagen</label>
+                  <input class="form-control" type="file" id="image" name="image">
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ <!-- FORM ACTUALIZAAAR -->
+ @foreach($products as $product)
+ <div class="modal fade" id="editModal{{ $product->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar producto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="{{ route('products.update', $product->id) }}" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="col-auto">
+                    <label class="visually-hidden" for="name">Nombre producto</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ $product->name }}" placeholder="Nombre">
+                </div>
+                <div class="col-auto">
+                    <label class="visually-hidden" for="precio">Precio</label>
+                    <input type="text" class="form-control" id="precio" name="precio" value="{{ $product->precio }}" placeholder="Precio">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Imagen actual</label>
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="Imagen actual" style="max-width: 100px;">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Cargar nueva imagen (opcional)</label>
+                    <input class="form-control" type="file" id="image" name="image">
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+        
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>
+@endforeach
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

@@ -28,7 +28,7 @@
 			</div>
 			
 			<div class="productscontent">
-				<div class="all-products">
+				<div class="all-products">  
 					@foreach($products as $product)
 					<div class="product">
 						<img src="{{ asset('storage/' . $product->image) }}" alt="">
@@ -49,7 +49,6 @@
 			
 		</section>
 	</main>
-
 
 </body>
 </html>

@@ -50,7 +50,7 @@ html{
 }
 main{
   position: relative;
-  padding-top: 120px;
+  padding-top: 180px;
 }
 body{
   background-color: var(--white-color);
@@ -110,59 +110,6 @@ a{
   color: var(--white-color);
 }
 
-
-.servicios{
-  padding: 2rem;
-}
-.servicecontent{
-  text-align: center;
-  position: relative;
-  align-items: center;
-}
-
-.services {
-  width: 100%;
-  display: grid;
-  grid-template-rows: repeat(2, 250px 400px);
-  gap: 30px;
-  padding: 2rem;
-}
-
-
-.services__image {
-  background-size: cover;
-  background-position: center;
-}
-
-.services__texts {
-  padding: 1rem 1.5rem;
-  place-self: center;
-  text-align: center;
-  --color: hsla(51, 100%, 49%, 0.263);
-}
-
-.services__texts--2 {
-  --color: hsla(7, 99%, 70%, 0.267);
-}
-
-.services__image--3 {
-  background-size: cover;
-  background-position: center;
-}
-
-.services__texts--3 {
-
-}
-
-.services__image--4 {
-  background-size: cover;
-  background-position: center;
-}
-
-.services__texts--4 {
-  --color: hsla(7, 99%, 70%, 0.267);
-}
-
 .services__title {
   font-size: 2rem;
   font-family: var(--font-cursive);
@@ -195,6 +142,46 @@ a{
   background-color: var(--color);
 }
 
+.servicios{
+  text-align: center;
+  position: relative;
+  align-items: center;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.servicecontent{
+  padding-top:50px;
+}
+
+.service-item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.services__image {
+  width: 50%;
+  height: 500px; 
+  overflow: hidden; 
+}
+
+.services__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.services__texts {
+  width: 50%;
+  padding: 0 20px;
+  --color: hsla(51, 100%, 49%, 0.263);
+}
+
+
 .opbtn1 {
   color: white;
   display: inline-block;
@@ -218,82 +205,3 @@ a{
   background-color: #fea9c5;
   border: 1px solid var(--fuccia-color);
 }
-
-
-@media (min-width:768px) {
-
-    .services {
-        grid-template-rows: repeat(4, 500px);
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "img1 text1"
-            "img2 text2"
-            "img3 text3" 
-            "img4 text4";
-    }
-
-
-    .services__image {
-        background-image: url('/IMG/uñas.jpg');
-        grid-area: img1;
-    }
-
-    .services__texts {
-
-        text-align: start;
-        grid-area: text1;
-        padding: 2rem 3rem;
-    }
-
-    .services__texts--2 {
-        grid-area: text2;
-    }
-
-
-    .service__image--2 {
-        background-image: url('/IMG/pestañas.jpg');
-        grid-area: img2;
-    }
-
-    .service__image--3 {
-        background-image: url('/IMG/facial.jpg'); 
-        grid-area: img3;
-    }
-
-    .services__texts--3 {
-        grid-area: text3;
-        
-    }
-
-    .service__image--4 {
-        background-image: url('/IMG/maquillaje.jpg'); 
-        grid-area: img4;
-    }
-
-    .services__texts--4 {
-        grid-area: text4;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

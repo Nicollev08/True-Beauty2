@@ -27,7 +27,7 @@
 				<div class="product">
 					<img src="/IMG/cremafacial.jpg">
 					<div class="product-info">
-						<h4 class="product-title">Crema facial
+						<h4 class="product-title">Crema facial   
 						</h4>
 						<p class="product-price">$12.000</p>
 						<a class="product-btn" href="#">Descripción</a>

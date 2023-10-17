@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap&family=Montserrat:wght@300;400;700;800&display=swap');
+
+
+/*---------------VARIABLES CSS-------------------*/
+:root {
+    --header-height: 6.25rem;
+
+    /*---------------COLLORS -------------------*/
+    --rosa-color: #e4b2c6a9;
+    --cafe-color: #4f321f;
+    --amarillo-color: #dfd6a7;
+    --white-color: #ffffff;
+    --black-color: #151515;
+    --fuccia-color: rgb(219, 103, 149);
+
+    /*---------------FONT  AND TYPOGRAPHY-------------------*/
+    --font-cursive: 'Gelasio', cursive;
+    --body-font: 'Montserrat', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+
+    /*---------------FONT WEIGHT-------------------*/
+    --font-light: 300;
+    --font-medium: 400;
+    --font-semi-bold: 700;
+    --font-bold: 800;
+
+    /*---------------MARGINS-------------------*/
+    --mb-05: 0.5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*---------------Z INDEXS-------------------*/
+    --Z-fixed: 100;
+    --z-tooltip: 10;
+    --z_negative: -1;
+}
+/* base */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section{
+    padding: calc(var(--header-height) + 20px) 0;
+}
+.grid{
+    display: grid;
+    gap: 20px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__title {
+    margin: 0 auto;
+    text-align: center;
+}
+.section__title2 {
+    margin: 0 auto;
+    text-align: center;
+}
+.section__title h1{
+    font-family: var(--font-cursive);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+    line-height: var(--big-font-size);
+    color: var(--rosa-color);
+}
+.section__title2 h1{
+    font-family: var(--font-cursive);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+    line-height: var(--big-font-size);
+    color: var(--black-color);
+}
+.section__title span{
+    font-weight: var(--font-light);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-font-size);
+    color: var(--white-color);
+}
+
+
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+  }
+  
+  .testimonials__content {
+    
+  }
+  .testimonials .row{
+    top: -50px;
+    position: relative;
+  }
+  .testimonials__card {
+    width: 420px;
+    
+    grid-template-columns: 1fr;
+  }
+.testimonials__item{
+    flex-direction: column;
+    margin-bottom: var(--mb-1);
+    position: relative;
+}
+
+/*NUEVOS ESTILOS PARA TESTIMONIOS*/
+.testimonials__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.testimonials__card {
+    width: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials__item::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rosa-color);
+    border-radius: 30px;
+}
+.testimonials__img img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: all 0.8s ease;
+    z-index: var(--Z-fixed);
+}
+.testimonials__item:hover .testimonials__img img{
+    transform: translateX(300px) rotate(360deg);
+}
+.testimonials__box{
+    position: relative;
+    padding: 30px;
+    z-index: var(--z-tooltip);
+}
+.testimonials__name{
+    margin-bottom: var(--mb-1);
+    text-align: center;
+}
+.testimonials__name h2{
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-font-size);
+    margin-bottom: var(--mb-05);
+}
+.testimonials__name .star__icon{
+    color: var(--cafe-color);
+    font-size: var(--h3-font-size);
+}
+.testimonials__descripition p{
+    line-height: var(--h2-font-size);
+    margin-top: var(--mb-3);
+  
+}
+
+.opbtn {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--fuccia-color);
+  border: 1px solid var(--white-color);
+  padding: 1.2rem 3rem;
+  border-radius: 1rem;
+  font-size: 14px;
+  transition: all 0.2s;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  top: 100px;
+
+   /* Esto coloca el botón al final */
+}
+
+.button:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: var(--rosa-color);
+  border: 1px solid var(--fuccia-color);
+}
+
+/* Formulario de opinionnes */
+.opinion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    z-index: var(--z-tooltip);
+    background-position: center;
+  }
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea, input[type="file"] {
+   
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--fuccia-color);
+    border: 1px solid var(--white-color);
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    font-size: 14px;
+    transition: all 0.2s;
+    text-align: center;
+    position: relative;
+    margin-top: -130px;
+   
+  }
+.button:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: var(--rosa-color);
+    border: 1px solid var(--fuccia-color);
+  }
+
+
+
+
+/*NUEVOS STILOS*/
+
+
+.testimonials__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.testimonials__card {
+    width: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el formulario dentro de una caja */
+.opinion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.opinion__container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Para ocupar el espacio disponible */
+    margin-right: 20px; /* Espacio entre el formulario y los testimonios */
+}
+
+/* Estilos para el botón del formulario */
+.button {
+    background-color: var(--fuccia-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--rosa-color);
+}
+.eliminar{
+    background-color: var(--fuccia-color);
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: var(--mb-3);
+}
+
+
+.eliminar:hover{
+    background-color: var(--rosa-color);
+}
+.editar{
+    background-color: var(--fuccia-color);
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+.editar:hover{
+    background-color: var(--rosa-color);
+}
+.a{
+    color:#fff ;
+}
+
+.opbtn1 {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--fuccia-color);
+    border: 1px solid var(--white-color);
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    font-size: 12px;
+    transition: all 0.2s;
+    text-align: center;
+    position: relative;
+    margin-top: var(--mb-3);
+
+  
+     /* Esto coloca el botón al final */
+  }
+  
+  .opbtn1:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: #fea9c5;
+    border: 1px solid var(--fuccia-color);
+  }

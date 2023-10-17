@@ -7,7 +7,7 @@
    
     <link rel="stylesheet" href="{{ url('assets/css/menu.css') }}">
     
-    <title>menucito</title>
+    <title>MENU</title>
 </head>
 <body>
     <header action="/index" class="header">
@@ -34,11 +34,14 @@
                 </div>
             </div>
             @endguest
+           
             @auth
             <div class="dropdown">
-                <button class="dropbtn"><i class="fa-solid fa-user-plus" style="color: #fdfdfd;"></i></button>
+                <button class="dropbtn"> <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a></button>
                 <div class="dropdown-content">
-                    <a class="option" href="#">Editar perfil</a>
+                    <a class="option" href="/perfil">Editar perfil</a>
                     <a class="option" href="/admin">Dashboard</a>
                     <a class="option" href="/logout">Cerrar sesión</a>
                 </div>
