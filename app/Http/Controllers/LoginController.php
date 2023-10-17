@@ -26,10 +26,6 @@ class LoginController extends Controller
 
         Auth::login($user);
 
-        if ($user->role == 'admin') {
-            return redirect()->route('admin.index');
-        }
-
         return $this->authenticated($request, $user);
     }
 
@@ -38,6 +34,6 @@ class LoginController extends Controller
     }
 
     public function contra(){
-        return view('auth.contra');
+        return view('auth.password');
     }
 }

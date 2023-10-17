@@ -530,7 +530,7 @@ a{
   }
   
   .testimonials__content {
-    
+    padding: 2rem;
   }
   .testimonials .row{
     top: -50px;
@@ -606,7 +606,7 @@ a{
     transition: all 0.2s;
     text-align: center;
     position: relative;
-    margin-top: 40px;
+    margin-top: 50px;
     top: 100px;
 
     
