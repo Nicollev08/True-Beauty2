@@ -32,8 +32,8 @@ class ServiceController extends Controller
        $service = new Service($request->except('image'));
    
        if ($request->hasFile('image')) {
-           $imagePath = $request->file('image')->store('service_images');
-           $service->image = 'service_images/' . basename($imagePath);
+           $imagePath = $request->file('image')->store('services_images');
+           $service->image = 'services_images/' . basename($imagePath);
        }
    
        $service->save();

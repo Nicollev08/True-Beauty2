@@ -21,7 +21,7 @@
         <div class="col-md-4 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                 @php($image = auth()->user()->image)
-                <img class="rounded-circle mt-0" width="250px" height="250px" src="@if($image == null) https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg  @else {{ asset('storage/perfil_image/' .$image) }} @endif" id="image">
+                <img class="rounded-circle mt-0" width="250px" height="250px" src="@if($image == null) https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg  @else {{ asset('storage/' .$image) }} @endif" id="image">
                 <span class="font-weight-bold">
                     <br>
                     <input type="file" name="image" id="image"  class="form-control">

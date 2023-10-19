@@ -16,7 +16,7 @@
                 <th scope="col">IMAGEN</th>
                 <th scope="col">NOMBRE</th>
                 <th scope="col">DESCRIPCION</th>
-                <th scope="col">SERVICIOS</th>
+                <th scope="col">ACCIONES</th>
             </tr>
         </thead>
         <tbody>
@@ -99,11 +99,11 @@
                 @method('PUT')
                 <div class="col-auto">
                     <label class="visually-hidden" for="name">Nombre servicio</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $service->name }}" placeholder="Nombre">
+                    <input type="text" class="form-control" id="name" name="name" value="{{ $service->name }}" >
                 </div>
                 <div class="col-auto">
                     <label class="visually-hidden" for="precio">Precio</label>
-                    <input type="text" class="form-control" id="description" name="description" value="{{ $service->description }}" placeholder="Precio">
+                    <input type="text" class="form-control" id="description" name="description" value="{{ $service->description }}" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="image">Imagen actual</label>

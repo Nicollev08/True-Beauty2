@@ -12,13 +12,18 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'lastname' => 'required',
-            'image' => 'nullable',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'phone' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
-        $user = User::create($request->all());
+        $user = new User($request->except('image'));
+   
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('perfil_images');
+            $user->image = 'perfil_images/' . basename($imagePath);
+        }
 
         return redirect()->route('users.index')->with('success', 'Usuario creado exitosamente');
     }
@@ -28,21 +33,32 @@ class UserController extends Controller
         return view('admin.users.index', compact('user'));
     }
 
+
     public function update(Request $request, User $user)
     {
         $request->validate([
             'name' => 'required',
             'lastname' => 'required',
-            'image' => 'nullable',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'phone' => 'required',
-            'email' => 'required|email|unique:users,email,' . $user->id,
-            'password' => 'nullable|min:6', 
+            'email' => 'required',
+            'password' => 'nullable', 
         ]);
 
-        $user->update($request->all());
+        $user->name = $request->input('name');
+        $user->lastname = $request->input('lastname');
+        $user->phone = $request->input('phone');
+        $user->email = $request->input('email');
+    
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('perfil_images');
+            $user->image = 'perfil_images/' . basename($imagePath);
+        }
 
+        $user->save();
         return redirect()->route('users.index')->with('success', 'Usuario actualizado exitosamente');
     }
+
 
     public function destroy(User $user)
     {
@@ -78,7 +94,7 @@ class UserController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('perfil_image', $imageName); 
+            $image->storeAs('perfil_images', $imageName); 
             $user->image = $imageName;
         }
 
