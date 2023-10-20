@@ -10,6 +10,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TipController;
+use App\Models\Tip;
 use App\Models\User;
 
 /*
@@ -80,3 +82,6 @@ Route::get('/productos', [HomeController::class, 'viewproductos']);
 
 
 Route::resource('/testimonies', TestimonyController::class )->names('testimonies');
+
+Route::get('/crudtips', [TipController::class, 'index'])->name('tip.index');
+Route::resource('tips', TipController::class);

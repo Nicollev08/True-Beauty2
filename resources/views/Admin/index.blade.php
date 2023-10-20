@@ -10,7 +10,7 @@
 
   <h1>¿QUÉ DESEAS REALIZAR?</h1>
   <div class="cruds">
-    <a href="#">Nuevo Tip</a>
+    <a href="/crudtips">Nuevo Tip</a>
     <a href="/crudproduct">Nuevo Producto</a>
     <a href="/crudservices">Nuevo Servicio</a>
     <a href="#">Agendar cita</a>
