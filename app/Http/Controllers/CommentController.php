@@ -25,6 +25,7 @@ class CommentController extends Controller
         
         $comment=new Comment; 
         $comment->comment=$request->comment;
+        $comment->rating=$request->rating;
         $comment->save();
         return redirect()->route('comments.index');
 

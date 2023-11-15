@@ -31,6 +31,18 @@
                     <div class="form-group">
                         <label for="comment">Opinión:</label>
                         <input type="text" name="comment">
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rating" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Agregar Comentario</button>
                 </form>
@@ -57,16 +69,17 @@
             </div>
             <div class="testimonials__box">
                 <div class="testimonials__name">
-                    <h1>Julieta</h1>
-                    <i class='bx bxs-star star__icon'></i>
-                    <i class='bx bxs-star star__icon'></i>
-                    <i class='bx bxs-star star__icon'></i>
-                    <i class='bx bxs-star star__icon'></i>
-                    <i class='bx bxs-star star__icon'></i>
+                    <h1>Usuario</h1>
+                 
                 </div>
                 <div class="testimonials__description">
                     <p>{{ $comment->comment }}</p>
+                    @for($i=1; $i<=$comment->rating; $i++)
+                    <label for="star{{$i}}" class="star-label"> <i class='bx bxs-star star__icon' ></i></label>
+                    @endfor
+                     
                 </div>
+                
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal{{ $comment->id }}">
                     Editar
                 </button>
@@ -97,6 +110,7 @@
                     <div class="form-group">
                         <label for="comment">Opinión:</label>
                         <input type="text" name="comment" value="{{ $comment->comment }}">
+                        
                     </div>
                     <button type="submit" class="btn btn-primary">Editar Comentario</button>
                 </form>
